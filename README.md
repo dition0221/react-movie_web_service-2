@@ -7,7 +7,7 @@
 노마드 코더 정책 상 강의요약은 괜찮으나, 코드와 필기는 공개적인 곳에 올리면 안 됨.  
 필기 요약지는 암호화된 .zip 파일로 저장함.
 
-- **23-06-17 : #1.1 ~ #3.3 / JSX, useState**
+- **23-08-02 : #2.0 ~ #2.6 / JSX**
   - React의 규칙
     1. HTML을 직접 작성하지 않음
     2. JavaScript로 element를 생성한 후, HTML에 element를 배치
@@ -18,6 +18,7 @@
       1. HTML에서 id="root"인 div 생성
       2. root 생성하기 : const root = ReactDOM.createRoot(document.getElementById("root));
       3. 페이지 렌더링하기 : root.render( ... );
+- **23-08-03 : #3.0 ~ #3.9 / useState**
   - state : 데이터가 저장되는 곳
   - React에서 변수를 사용하는 방법 : 중괄호({}) 안에 변수를 사용하면 됨
   - useState : event등으로 state가 업데이트 될 시 자동으로 리렌더링
