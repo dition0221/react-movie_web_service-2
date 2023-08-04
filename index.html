@@ -15,75 +15,27 @@
     <script type="text/babel">
         const root = ReactDOM.createRoot(document.getElementById("root"));
 
-        function TimeConverter() {
-            const [amount, setAmount] = React.useState('');
-            const [inverted, setInverted] = React.useState(false);
-            const onChange = (event) => setAmount(event.target.value);
-            const reset = () => setAmount('');
-            const onInverted = () => {
-                setInverted((current) => !current);
-                reset();
-            };
-            return (
-                <div>
-                    <div>
-                        <label htmlFor="minutes">Minutes</label>
-                        <input value={inverted ? amount * 60 : amount} id="minutes" placeholder="Minutes" type="number" onChange={onChange} disabled={inverted} />
-                    </div>
-                    <div>
-                        <label htmlFor="hours">Hours</label>
-                        <input value={inverted ? amount : amount / 60} id="hours" placeholder="Hours" type="number" onChange={onChange} disabled={!inverted} />
-                    </div>
-                    <button onClick={reset}>Reset</button>
-                    <button onClick={onInverted}>Inverted</button>
-                </div>
-            )
+        function Btn({ text, changeValue }) {
+            console.log(text, "was changed");
+            return <button
+                onClick={changeValue}
+                style={{
+                    backgroundColor: "tomato",
+                    color: "white",
+                    padding: "10px 20px",
+                    border: "none",
+                    borderRadius: "10px"
+                }}>{text}</button>
         }
 
-        function DistanceConverter() {
-            const [amount, setAmount] = React.useState('');
-            const onChange = () => {
-                setAmount(event.target.value);
-            }
-            const onReset = () => {
-                setAmount('');
-            }
-            const onInverted = () => {
-                //
-            }
-            return (
-                <div>
-                    <div>
-                        <label for="km">km</label>
-                        <input id="km" value={amount} placeholder="km" type="number" onChange={onChange} />
-                    </div>
-                    <div>
-                        <label for="mile">mile</label>
-                        <input id="mile" value={amount} placeholder="mile" type="number" onChange={onChange} disabled />
-                    </div>
-                    <button onClick={onReset}>Reset</button>
-                    <button>Inverted</button>
-                </div>
-            );
-        }
-
+        const MemorizedBtn = React.memo(Btn);
         function App() {
-            const [index, setIndex] = React.useState("xx");
-            const onSelect = (event) => {
-                setIndex(event.target.value);
-            };
+            const [value, setValue] = React.useState("Save");
+            const changeValue = () => setValue("Revert Changes");
             return (
                 <div>
-                    <h1>Super Converter</h1>
-                    <select value={index} onChange={onSelect}>
-                        <option value="xx">Select your units</option>
-                        <option value="0">Time (minute & hours)</option>
-                        <option value="1">Distance (km & mile)</option>
-                    </select>
-                    <hr />
-                    {index === "xx" ? <span>Please select your units</span> : null}
-                    {index === "0" ? <TimeConverter /> : null}
-                    {index === "1" ? <DistanceConverter /> : null}
+                    <MemorizedBtn text={value} changeValue={changeValue} />
+                    <MemorizedBtn text="Continue" />
                 </div>
             )
         }
