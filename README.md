@@ -40,5 +40,5 @@
     > 가상 DOM을 사용함으로써, 변경이 필요한 최소한의 요소만 실제 DOM에 반영되기 때문에 불필요한 연산을 줄이고 성능을 향상시킬 수 있습니다.
   - JSX 예약어 : 몇몇 예약어는 JS에서 선점하고 있기에, 다른 이름으로 사용하는 속성들이 존재함
   - input 값을 가져오는 방법 : event를 사용해 'event.target.value'값을 참조
-- **23-08-04 : #4.0 ~ #5.1 /**
+- **23-08-04 : #4.0 ~ #5.1 / props & CRA**
   - _<a href="https://reactunitconverter.dition0221.repl.co/" target="_blank">[Code Challenge] Unit Converter</a>_
