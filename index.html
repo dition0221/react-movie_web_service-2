@@ -41,9 +41,30 @@
         }
 
         function DistanceConverter() {
+            const [amount, setAmount] = React.useState('');
+            const onChange = () => {
+                setAmount(event.target.value);
+            }
+            const onReset = () => {
+                setAmount('');
+            }
+            const onInverted = () => {
+                //
+            }
             return (
-                <h3>km 2 Miles</h3>
-            )
+                <div>
+                    <div>
+                        <label for="km">km</label>
+                        <input id="km" value={amount} placeholder="km" type="number" onChange={onChange} />
+                    </div>
+                    <div>
+                        <label for="mile">mile</label>
+                        <input id="mile" value={amount} placeholder="mile" type="number" onChange={onChange} disabled />
+                    </div>
+                    <button onClick={onReset}>Reset</button>
+                    <button>Inverted</button>
+                </div>
+            );
         }
 
         function App() {
