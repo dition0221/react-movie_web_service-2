@@ -42,4 +42,35 @@
   - input 값을 가져오는 방법 : event를 사용해 'event.target.value'값을 참조
 - **23-08-04 : #4.0 ~ #5.1 / props & CRA**
   - _<a href="https://reactunitconverter.dition0221.repl.co/" target="_blank">[Code Challenge] 'useState'를 사용한 Unit Converter</a>_
-  -
+  - props : 부모 컴포넌트로부터 자식 컴포넌트에 데이터를 보낼 수 있게 해주는 방법
+    - 컴포넌트 함수의 매개변수(props)를 받아서 사용 가능
+      - 어떤 props이든 컴포넌트에 보내면, 컴포넌트(함수)의 첫 번째 인자로 사용
+      - props는 첫 번째이자 유일한 인자
+      - props의 이름은 마음대로 사용 가능
+      - String, Boolean, Function(Event Listener) 등 원하는 데이터타입으로 전달 가능
+    - React가 자동으로 모든 props를 하나의 object로 전달함
+      - 보통 ES6 구문을 사용해 shortcut으로 사용
+    - JS의 문법으로 props를 받을 때, 기본값을 지정할 수 있음
+  - memo : 부모 컴포넌트에서 props가 변경되지 않는 하에 자식 컴포넌트를 리렌더링 할지 말지 결정할 수 있음
+    - props가 변경되지 않는다면, 리렌더링할 필요가 없다는 것을 알려주는 것
+      - 원래 state가 변경되면, 모든 자식 컴포넌트는 리렌더링이 일어남
+      - 변경되지 않는 자식 컴포넌트는 제외하고, 변경되는 자식 컴포넌트만 리렌더링을 하도록 하는 기능
+    - 기본형 : const 새컴포넌트명 = React.memo(기존컴포넌트명);
+  - Prop Types : 어떤 데이터타입의 prop을 받고 있는지 체크를 해줌
+    - React에게 컴포넌트의 prop들의 데이터타입이 무엇인지 알려줘야 함
+    - 패키지 : 'prop-types'
+    - 기본형 : 컴포넌트명.propTypes = { 프로퍼티명: PropTypes.데이터타입 }
+    - 데이터타입 뿐만 아니라, 더 많은 기능을 제공함
+      - 필수 요소, 목록 중 하나의 값만 받도록 지정 등
+  - Create React App : React App을 만드는 방법
+    - 설치법 : Node.js와 npx 설치 필요 / 'npx create-react-app 폴더명'
+    - 사용법
+      1. 'npm start'로 개발환경 시작
+      2. 'src/index.js'파일은 'public/index.html'파일에 넣도록 설정되어있음
+      3. 기본코드를 제외하고 삭제, 파일 삭제 및 정리하기
+  - 컴포넌트 CSS
+    - CSS module : 특정 컴포넌트를 위한 CSS 파일을 만들 수 있음
+      - 파일명 : 컴포넌트명.module.css
+      - 컴포넌트파일에 CSS를 import하여 사용
+      - CSS파일에서 여러 class명으로 만든 후, 컴포넌트에서 해당 class명을 골라서 사용 가능
+      - React는 랜덤한 class를 가지므로, 프로젝트 전체의 class명을 기억할 필요가 없으며, CSS파일의 동일한 class명을 다른 CSS파일 내에서도 사용 가능
