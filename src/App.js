@@ -1,3 +1,4 @@
+import "./App.module.css";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -18,28 +19,41 @@ function App() {
   };
   return (
     <div>
-      <h1>The Coins! {loading ? null : `(${coins.length})`}</h1>
-      {loading ? (
-        <strong>Loading...</strong>
-      ) : (
-        <div>
-          <form onSubmit={onSubmit}>
-            <input
-              name="money"
-              type="number"
-              placeholder="Write your '$' and Enter !"
-            />
-          </form>
-          <select>
-            {coins.map((coin) => (
-              <option key={coin.id}>
-                {coin.name} ({coin.symbol}) : ${coin.quotes.USD.price} USD
-                {myMoney ? ` // ${myMoney / coin.quotes.USD.price}` : null}
-              </option>
-            ))}
-          </select>
-        </div>
-      )}
+      <main>
+        <h1>The Coins! {loading ? null : `(${coins.length})`}</h1>
+        {loading ? (
+          <strong>Loading...</strong>
+        ) : (
+          <div>
+            <form onSubmit={onSubmit}>
+              <input
+                name="money"
+                type="number"
+                placeholder="Write your '$' and Enter !"
+              />
+            </form>
+            <select>
+              {coins.map((coin) => (
+                <option key={coin.id}>
+                  {coin.name} ({coin.symbol}) : ${coin.quotes.USD.price} USD
+                  {myMoney
+                    ? ` 💲 ${myMoney / coin.quotes.USD.price} ${coin.symbol}`
+                    : null}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+      </main>
+      <footer>
+        <a
+          target="_blank"
+          href="https://github.com/dition0221"
+          rel="noreferrer"
+        >
+          @dition0221
+        </a>
+      </footer>
     </div>
   );
 }
