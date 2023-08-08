@@ -22,9 +22,29 @@ strong {
   display: flex;
   justify-content: center;
 }
+input {
+  margin-bottom: 20px;
+}
+input::placeholder {
+  font-style: italic;
+}
+input:hover {
+  background-color: yellowgreen;
+  border-color: blue;
+}
+input:focus {
+  background-color: skyblue;
+}
 select {
   width: min-content;
   color: blue;
+}
+select:hover:not(:focus) {
+  background-color: yellowgreen;
+  border-color: blue;
+}
+option {
+  color: black;
 }
 footer {
   display: flex;

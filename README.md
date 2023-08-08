@@ -87,4 +87,10 @@
   - cleanup function : 컴포넌트가 destroy될 시 특정 코드를 실행할 수 있는 기능
     - 'useEffect'의 콜백함수에서 return문에 콜백함수를 사용해 작성
 - **23-08-07 : #7.0 ~ #7.2 / use RestAPI**
+  - array인 state값을 수정하는 방법
+    - modifier 함수를 사용해 state값을 수정해야하므로, '.push()' 등을 사용해 state값을 직접적으로 수정 불가능
+    - '나머지연산자(...)'를 사용해 배열에 값을 추가 가능
+    - '.map()' 메서드를 사용해 새로운 배열 생성 가능
+      - 화면에 배열을 사용한 list를 보여주기 가능
 - **23-08-08 : #7.3 ~ #7.10 /**
+  - _<a href="https://replit.com/@dition0221/React-Coin-RestAPI" target="_blank">[Code Challenge] 'RestAPI'를 사용한 가상화폐 리스트</a>_
