@@ -94,4 +94,20 @@
       - 화면에 배열을 사용한 list를 보여주기 가능
 - **23-08-08 : #7.3 ~ #7.5 / Router**
   - _<a href="https://replit.com/@dition0221/React-Coin-RestAPI" target="_blank">[Code Challenge] 'RestAPI'를 사용한 가상화폐 리스트</a>_
+  - React Router
+    - 패키지 : 'npm i react-router-dom'
+    - 설정법
+      1. 'src' 폴더 내에 'routes' 또는 'pages' 폴더 생성하기
+      2. 해당 폴더에 routing 할 컴포넌트 생성하기
+      3. Router 설정하기
+         - 'App.js'에서 router를 render하도록 설정
+           &lt;BrowserRouter&gt;
+           &nbsp;&nbsp;&lt;Routes&gt;
+           &nbsp;&nbsp;&nbsp;&nbsp;&lt;Route path="경로" element={&lt;컴포넌트 /&gt;} &gt;
+           &nbsp;&nbsp;&lt;/Routes&gt;
+           &lt;/BrowserRouter&gt;
+    - 다른 Route로 이동하는 방법
+      - 기본형: &lt;Link to="경로"&gt;링크명&lt;/Link&gt;
+      - 브라우저 새로고침 없이 다른 페이지로 이동시켜줌
+      - HTML &lt;a&gt;태그를 사용하지 않음 (페이지 전체가 새로고침되기 때문)
 - **23-08-09 : #7.6 ~ #7.10 /**
