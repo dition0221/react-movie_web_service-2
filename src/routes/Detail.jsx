@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+// Components
+import Loading from "../components/Loading";
+// CSS
+import "./css/Detail.css";
 
 function Detail() {
   const [loading, setLoading] = useState(true);
@@ -16,32 +20,59 @@ function Detail() {
     };
     getMovie();
   }, [id]);
-  console.log(detail);
+
   return (
     <div>
       {loading ? (
-        <h1>Loading...</h1>
+        <Loading />
       ) : (
-        <div>
-          <img src={detail.large_cover_image} alt={detail.title} />
-          <h2>
-            <a href={detail.url} target="_blank" rel="noreferrer">
-              {detail.title_long ? detail.title_long : detail.title}
-            </a>
-          </h2>
-          <p>{`Rating: ${detail.rating}`}</p>
-          <p>{`Run time: ${detail.runtime} [min]`}</p>
-          {detail.genres ? (
+        <div className="detail-container">
+          <div className="detail">
             <div>
-              <h3>Genres</h3>
-              <ul>
-                {detail.genres.map((genre) => (
-                  <li key={genre}>{genre}</li>
-                ))}
-              </ul>
+              <img
+                className="poster"
+                src={detail.large_cover_image}
+                alt={detail.title}
+              />
             </div>
-          ) : null}
-          {detail.description_intro ? <p>{detail.description_intro}</p> : null}
+            <div>
+              <h2>
+                <a href={detail.url} target="_blank" rel="noreferrer">
+                  {detail.title_long ? detail.title_long : detail.title}
+                </a>
+              </h2>
+              <div className="detail__meta">
+                <span>{`✨ ${
+                  detail.rating ? detail.rating : "❓"
+                } / 10.0`}</span>
+                <span>{`🕘 ${
+                  detail.runtime ? detail.runtime : "❓"
+                } min`}</span>
+              </div>
+              {detail.description_intro ? (
+                detail.description_intro.length > 820 ? (
+                  <p>{`${detail.description_intro.slice(0, 820)}...`}</p>
+                ) : (
+                  <p>{detail.description_intro}</p>
+                )
+              ) : null}
+              {detail.genres ? (
+                <div>
+                  <br />
+                  <ul>
+                    {detail.genres.map((genre) => (
+                      <li key={genre}>▪{genre}&nbsp;</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+            </div>
+            <img
+              className="background"
+              src={detail.background_image_original}
+              alt={detail.background_image_original}
+            />
+          </div>
         </div>
       )}
     </div>

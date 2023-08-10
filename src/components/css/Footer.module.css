@@ -1,0 +1,45 @@
+.footer {
+  position: fixed;
+  bottom: 20px;
+  z-index: 99;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer span {
+  opacity: 0.2;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 900;
+  margin-left: 15px;
+  cursor: default;
+  user-select: none;
+}
+.footer div {
+  display: flex;
+  align-items: center;
+}
+.footer button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  background-color: whitesmoke;
+}
+.footer button:hover {
+  border-color: white;
+  background-color: black;
+  color: white;
+}
+.footer button:active {
+  border-color: black;
+  background-color: yellowgreen;
+  color: black;
+}

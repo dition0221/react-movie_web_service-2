@@ -1,13 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./reset.css"; // Reset Css
-// Components
+// Routes
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
+// Components
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    // <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Footer />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movie/:id" element={<Detail />} />

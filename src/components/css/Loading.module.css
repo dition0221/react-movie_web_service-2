@@ -1,0 +1,33 @@
+.loading {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loading h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+.loading span {
+  font-style: italic;
+  opacity: 0.4;
+}
+.loading div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loading svg {
+  width: 48px;
+  animation: rotation 1s linear infinite;
+}

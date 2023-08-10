@@ -2,10 +2,15 @@
 
 ### React를 중점적으로 사용해, 영화 웹 서비스를 만듭니다. [2번째]
 
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=white"/>
+<img src="https://img.shields.io/badge/React Router-CA4245?style=flat-square&logo=reactrouter&logoColor=white"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>
+<img src="https://img.shields.io/badge/gh pages-222222?style=flat-square&logo=githubpages&logoColor=white"/>
+<img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white"/>
+
 ---
 
-노마드 코더 정책 상 강의요약은 괜찮으나, 코드와 필기는 공개적인 곳에 올리면 안 됨.  
-필기 요약지는 암호화된 .zip 파일로 저장함.
+- 해당 페이지의 최상단으로 이동하는 anchor 생성하기
 
 - **23-08-02 : #2.0 ~ #2.6 / JSX**
   - React의 규칙
@@ -111,3 +116,10 @@
       - 브라우저 새로고침 없이 다른 페이지로 이동시켜줌
       - HTML &lt;a&gt;태그를 사용하지 않음 (페이지 전체가 새로고침되기 때문)
 - **23-08-09 : #7.6 ~ #7.10 /**
+- **23-08-10 : CSS & Deploy**
+  - https://velog.io/@summereuna/gh-pages%EC%97%90%EC%84%9C-CRA%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%9C-React-AppSPA-%ED%98%B8%EC%8A%A4%ED%8C%85-%ED%95%98%EA%B8%B0
+
+---
+
+노마드 코더 정책 상 강의요약은 괜찮으나, 코드와 필기는 공개적인 곳에 올리면 안 됨.  
+필기 요약지는 암호화된 .zip 파일로 저장함.
