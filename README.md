@@ -6,12 +6,12 @@
 
 ---
 
-**결과물 : https://dition0221.github.io/react-movie_web_service-2/**
+**✨ 결과물 : https://dition0221.github.io/react-movie_web_service-2/**
 
 ![image](https://github.com/dition0221/dition0221/assets/129196812/fb3e6890-40e0-4ccf-9c62-5324d852ca2c)
 
-> React를 사용하고, RestAPI로부터 영화 정보를 가져와 화면에 보여주는 '영화 웹 서비스'입니다.
-> 각 영화의 포스터, 제목, 설명, 장르 등을 보여줍니다.
+> React를 사용하고, RestAPI로부터 영화 정보를 가져와 화면에 보여주는 '영화 웹 서비스'입니다.  
+> 각 영화의 포스터, 제목, 설명, 장르 등을 보여줍니다.  
 > 반응형 웹 디자인을 적용해 모바일/태블릿/PC 버전으로 동작합니다.
 >
 > - RestAPI 로딩 시 '로딩 중'이라고 화면에 표시.
@@ -21,8 +21,8 @@
 
 ![image](https://github.com/dition0221/dition0221/assets/129196812/3c22b85d-61bb-4ced-a0d7-d40eadb3db81)
 
-> [ 영화 상세 페이지 ]
-> React-Router를 이용해 각 영화마다 상세 페이지로 이동할 수 있습니다.
+> [ 영화 상세 페이지 ]  
+> React-Router를 이용해 각 영화마다 상세 페이지로 이동할 수 있습니다.  
 > 해당 영화의 평점, 러닝타임, 줄거리, 영화장르 등을 확인하실 수 있습니다.
 >
 > - URL 경로가 홈이 아닐 때 우측 하단에 Home으로 가는 버튼 생성.
@@ -152,7 +152,7 @@
 - **23-08-10 : CSS & Deploy**
   - 반응형 웹 구현 (768/1024px 기준으로 모바일/태블릿/PC버전)
   - github pages는 SPA(Single Page Application)을 지원하지 않는 것을 지원하도록 수정
-    - [참고] https://velog.io/@summereuna/gh-pages%EC%97%90%EC%84%9C-CRA%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%9C-React-AppSPA-%ED%98%B8%EC%8A%A4%ED%8C%85-%ED%95%98%EA%B8%B0
+    - <a href="https://velog.io/@summereuna/gh-pages%EC%97%90%EC%84%9C-CRA%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%9C-React-AppSPA-%ED%98%B8%EC%8A%A4%ED%8C%85-%ED%95%98%EA%B8%B0">[참고 문서]</a>
 
 ---
 
