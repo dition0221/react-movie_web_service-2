@@ -2,15 +2,32 @@
 
 ### React를 중점적으로 사용해, 영화 웹 서비스를 만듭니다. [2번째]
 
-<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=white"/>
-<img src="https://img.shields.io/badge/React Router-CA4245?style=flat-square&logo=reactrouter&logoColor=white"/>
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>
-<img src="https://img.shields.io/badge/gh pages-222222?style=flat-square&logo=githubpages&logoColor=white"/>
-<img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white"/>
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=white"/> <img src="https://img.shields.io/badge/React Router-CA4245?style=flat-square&logo=reactrouter&logoColor=white"/> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/> <img src="https://img.shields.io/badge/gh pages-222222?style=flat-square&logo=githubpages&logoColor=white"/> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white"/>
 
 ---
 
-- 해당 페이지의 최상단으로 이동하는 anchor 생성하기
+**결과물 : https://dition0221.github.io/react-movie_web_service-2/**
+
+![image](https://github.com/dition0221/dition0221/assets/129196812/fb3e6890-40e0-4ccf-9c62-5324d852ca2c)
+
+> React를 사용하고, RestAPI로부터 영화 정보를 가져와 화면에 보여주는 '영화 웹 서비스'입니다.
+> 각 영화의 포스터, 제목, 설명, 장르 등을 보여줍니다.
+> 반응형 웹 디자인을 적용해 모바일/태블릿/PC 버전으로 동작합니다.
+>
+> - RestAPI 로딩 시 '로딩 중'이라고 화면에 표시.
+> - 영화 제목을 클릭 시 해당 영화의 상세 페이지로 이동.
+> - 우측하단 Anchor버튼을 통해 현재 페이지의 최상단으로 이동.
+> - URL 경로 잘못 입력 시 404 페이지 존재.
+
+![image](https://github.com/dition0221/dition0221/assets/129196812/3c22b85d-61bb-4ced-a0d7-d40eadb3db81)
+
+> [ 영화 상세 페이지 ]
+> React-Router를 이용해 각 영화마다 상세 페이지로 이동할 수 있습니다.
+> 해당 영화의 평점, 러닝타임, 줄거리, 영화장르 등을 확인하실 수 있습니다.
+>
+> - URL 경로가 홈이 아닐 때 우측 하단에 Home으로 가는 버튼 생성.
+
+---
 
 - **23-08-02 : #2.0 ~ #2.6 / JSX**
   - React의 규칙
@@ -115,9 +132,27 @@
       - 기본형: &lt;Link to="경로"&gt;링크명&lt;/Link&gt;
       - 브라우저 새로고침 없이 다른 페이지로 이동시켜줌
       - HTML &lt;a&gt;태그를 사용하지 않음 (페이지 전체가 새로고침되기 때문)
-- **23-08-09 : #7.6 ~ #7.10 /**
+- **23-08-09 : #7.6 ~ #7.10 / useParams & Deploy**
+  - URL에 동적 parameter 사용하는 방법
+    - Route 설정에서 URL 경로에 ':파라미터명'으로 사용
+    - 'useParams()' 함수를 이용해 parameter를 객체로 받아올 수 있음
+  - 배포(Publish/Deploy)
+    - 'gh-pages' 패키지 : 결과물을 github pages에 업로드할 수 있게 해주는 패키지
+      - 설치법 : 'npm i gh-pages -D'
+      - 'React-Router' 버전6 이상으로 사용 시 &lt;BrowserRouter /&gt;에 'basename={process.env.PUBLIC_URL}' 속성을 추가해야 함
+    - 배포법
+      1. build 하기 : 'npm run build'로 build 폴더가 생성됨
+      2. 배포할 곳의 홈페이지 URL 입력하기
+      - 'package.json'에서 'homepage'프로퍼티를 생성
+      3. deploy 하기 : 'deploy' script를 생성
+      - ex. "deploy": "gh-pages -d build"
+      - build 후 deploy 하는 것을 간단히 하기 위해 'predeploy' script를 생성
+        - ex. "predeploy": "npm run build"
+        - 'npm run deploy' 실행 시 Node.js가 자동으로 predeploy를 먼저 실행함
 - **23-08-10 : CSS & Deploy**
-  - https://velog.io/@summereuna/gh-pages%EC%97%90%EC%84%9C-CRA%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%9C-React-AppSPA-%ED%98%B8%EC%8A%A4%ED%8C%85-%ED%95%98%EA%B8%B0
+  - 반응형 웹 구현 (768/1024px 기준으로 모바일/태블릿/PC버전)
+  - github pages는 SPA(Single Page Application)을 지원하지 않는 것을 지원하도록 수정
+    - [참고] https://velog.io/@summereuna/gh-pages%EC%97%90%EC%84%9C-CRA%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%9C-React-AppSPA-%ED%98%B8%EC%8A%A4%ED%8C%85-%ED%95%98%EA%B8%B0
 
 ---
 
