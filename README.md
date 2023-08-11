@@ -22,7 +22,7 @@
 ![image](https://github.com/dition0221/dition0221/assets/129196812/3c22b85d-61bb-4ced-a0d7-d40eadb3db81)
 
 > [ 영화 상세 페이지 ]  
-> React-Router를 이용해 각 영화마다 상세 페이지로 이동할 수 있습니다.  
+> **React-Router**를 이용해 각 영화마다 상세 페이지로 이동할 수 있습니다.  
 > 해당 영화의 평점, 러닝타임, 줄거리, 영화장르 등을 확인하실 수 있습니다.
 >
 > - URL 경로가 홈이 아닐 때 우측 하단에 Home으로 가는 버튼 생성.
